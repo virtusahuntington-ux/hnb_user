@@ -10,8 +10,8 @@ void main() async {
 
   // Initialize Supabase with project credentials
   await Supabase.initialize(
-    url: 'https://benmsdcykymxqceibdok.supabase.co',
-    publishableKey: 'sb_publishable_0IaqK3nfqsPjlGCftwFJKQ_VZvXZAqX',
+    url: 'https://kbkzbdidvpskssjvoxor.supabase.co',
+    publishableKey: 'sb_publishable_6GyZDug44K5tjxkFGSbqZw_sZkd_3Yp',
   );
 
   runApp(const MyApp());
@@ -114,10 +114,9 @@ class _UploadScreenState extends State<UploadScreen> {
             ),
           );
 
-      // 2. Generate public URL
+      // 2. Generate hardcoded public URL with the new project ID
       final publicUrl =
-          'https://benmsdcykymxqceibdok.supabase.co/storage/v1/object/public/hnb_bucket/$filePath';
-
+          'https://kbkzbdidvpskssjvoxor.supabase.co/storage/v1/object/public/hnb_bucket/$filePath';
       // 3. Insert record into Supabase 'moments'
       await supabase.from('moments').insert({
         'client_name': 'client1',
@@ -342,7 +341,7 @@ class _UploadScreenState extends State<UploadScreen> {
                                     );
 
                                 updatedMediaUrl =
-                                    'https://benmsdcykymxqceibdok.supabase.co/storage/v1/object/public/hnb_bucket/$filePath';
+                                    'https://kbkzbdidvpskssjvoxor.supabase.co/storage/v1/object/public/hnb_bucket/$filePath';
                               }
 
                               // Explicitly target the record ID using .eq('id', id)
